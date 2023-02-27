@@ -1,7 +1,7 @@
 const express = require('express')
 const { set } = require('mongoose')
 const router = express.Router()
-const {getGoals, setGoals, updateGoals, deleteGoals} = require('../controller/goalController')
+const {getGoals, setGoal, updateGoals, deleteGoals} = require('../controller/goalController')
 
 
 // router.get('/', getGoals)
@@ -10,7 +10,7 @@ const {getGoals, setGoals, updateGoals, deleteGoals} = require('../controller/go
 // router.delete('/:id', deleteGoals)
 
 //or
-router.route('/').get(getGoals).post(setGoals)
+router.route('/').get(getGoals).post(setGoal)
 router.route('/:id').put(updateGoals).delete(deleteGoals)
 
 module.exports = router
